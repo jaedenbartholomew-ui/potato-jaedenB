@@ -1,0 +1,290 @@
+root {
+    --font-family: lato, sans-serif;
+    --color-secondary: #3e2b1e;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: var(--font-family);
+    color: #fffbfb;
+    background:transparent;
+}
+
+body {
+    margin: 0;
+}
+
+nav {
+    min-height: 70px;
+    padding: 0 7vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+}
+
+.brand {
+    margin: 0;
+    font-size: 1.2rem;
+    font-family: var(--font-family);
+    font-weight: 900;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+.nav-primary {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item a {
+    display: block;
+    padding: 10px 14px;
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: .9rem;
+}
+
+.nav-item a:hover {
+    color: #f2f7f6;
+    border-radius: 30px;
+    background: rgba(144, 90, 46, 0.437);
+}
+
+.button-cta {
+    color: #ffffff;
+    background: transparent;
+    transform: translate(-8px);
+}
+
+header {
+    min-height: 640px;
+    padding: 90px 7vw 0;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    background:
+        radial-gradient(ellipse at center, rgba(192,169,145,1)0%, rgba(192,169,145,1)59%, rgba(192,169,145,1)100%),
+        url("images/potato-background.png") center/cover no-repeat;
+    color: #fff;
+}
+
+.header-title {
+    max-width: 800px;
+    margin: 0 auto 18px;
+    position: relative;
+    z-index: 2;
+    text-transform: capitalize;
+    font-size: clamp(2.3rem, 5vw, 4.5rem);
+    line-height: 1;
+}
+
+.header-subtitle {
+    max-width: 650px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #f7eadc;
+}
+
+.header-potato {
+    display: block;
+    width: min(480px, 70vw);
+    max-height: 370px;
+    object-fit: contain;
+    margin: 40px auto 0;
+    position: relative;
+    z-index: 2;
+    filter: drop-shadow(0 25px 20px rgba(0,0,0,.4));
+}
+
+main {
+    background: #f7f3ec;
+}
+
+.features {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 90px 25px 100px;
+    text-align: center;
+}
+
+.features-title,
+.order-title {
+    margin: 0 0 15px;
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: #3e2b1e;
+}
+
+.features-subtitle {
+    max-width: 650px;
+    margin: 0 auto 40px;
+    color: #796e64;
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+.feature-potatoes {
+    display: block;
+    max-width: min(800px, 90%);
+    max-height: 330px;
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+.buy-now {
+    padding: 90px 7vw 110px;
+    background: #fff;
+    text-align: center;
+}
+
+.potato-types {
+    list-style: none;
+    max-width: 1150px;
+    margin: 45px auto 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.potato {
+    min-height: 550px;
+    padding: 35px 25px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #e9e0d5;
+    border-radius: 12px;
+    background: #fffdf9;
+    box-shadow: 0 12px 35px rgba(65,44,25,.08);
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.potato:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 40px rgba(65,44,25,.15);
+    border-radius: 20px;
+}
+
+.potato-title {
+    margin: 0 0 22px;
+    color: #3e2b1e;
+    font-size: 1.45rem;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+}
+
+.potato-features {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    min-height: 135px;
+}
+
+.potato-description {
+    padding: 7px 0;
+    color: #756a61;
+    font-size: .93rem;
+}
+
+.potato-description::before {
+    margin-right: 8px;
+    color: #b35c18;
+    font-weight: 900;
+}
+
+.btn-order {
+    margin-top: 15px;
+    padding: 12px 30px;
+    border: 0;
+    border-radius: 20px;
+    border: 1px solid #994e1488;
+    background: transparent;
+    color: #020101;
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background .2s ease, transform .2s ease;
+}
+
+.btn-order:hover {
+    background: #994e1488;
+    transform: translateY(-2px);
+}
+
+.potato-price {
+    margin: 13px 0 15px;
+    color: #8a7a6b;
+    font-size: .9rem;
+}
+
+.potato-img {
+    display: block;
+    width: min(190px, 80%);
+    height: 170px;
+    object-fit: contain;
+    margin: 10px auto 0;
+}
+
+footer {
+    padding: 30px 20px;
+    background: #2e2118;
+    text-align: center;
+}
+
+.footer-text {
+    margin: 0;
+    color: #d9c9bb;
+    font-size: .85rem;
+}
+
+@media (max-width: 850px) {
+    .potato-types {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+    }
+
+    .potato {
+        min-height: auto;
+    }
+}
+
+@media (max-width: 560px) {
+    nav {
+        padding: 0 20px;
+    }
+
+    .nav-primary {
+        gap: 0;
+    }
+
+    .nav-item a {
+        padding: 8px 7px;
+        font-size: .78rem;
+    }
+
+    header {
+        min-height: 560px;
+        padding-top: 65px;
+    }
+
+    .features,
+    .buy-now {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
